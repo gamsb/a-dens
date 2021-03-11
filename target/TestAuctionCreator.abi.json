@@ -1,0 +1,239 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deployAuction",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"code","type":"cell"},
+				{"name":"nic_name_timespan","type":"uint32"},
+				{"name":"nic_name_starts_at","type":"uint32"},
+				{"name":"bid_phase_ends_at","type":"uint32"},
+				{"name":"ends_at","type":"uint32"},
+				{"name":"bid_key","type":"uint256"},
+				{"name":"bid_value","type":"uint128"},
+				{"name":"bid_seed","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onNICPong",
+			"inputs": [
+				{"name":"name_hash","type":"uint256"},
+				{"name":"nic_name_years","type":"uint32"},
+				{"name":"bid_hash","type":"uint256"},
+				{"name":"bid_pk","type":"uint256"},
+				{"name":"valid_until","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onNICNewOwner",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"new_owner_key","type":"uint256"},
+				{"name":"new_owner_address","type":"address"},
+				{"name":"owns_until","type":"uint32"},
+				{"name":"owns_since","type":"uint32"},
+				{"name":"old_owner_key","type":"uint256"},
+				{"name":"old_owner_address","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onAuctionCompleted",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"nic_name_starts_at","type":"uint32"},
+				{"name":"nic_name_timespan","type":"uint32"},
+				{"name":"owner_key","type":"uint256"},
+				{"name":"owner_address","type":"address"},
+				{"name":"name_budget","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onAuctionFailed",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"nic_name_timespan","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onAuctionPong",
+			"inputs": [
+				{"name":"name_hash","type":"uint256"},
+				{"name":"nic_name_years","type":"uint32"},
+				{"name":"bid_hash","type":"uint256"},
+				{"name":"bid_key","type":"uint256"},
+				{"name":"reserved_until","type":"uint32"},
+				{"name":"completed_at","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "regName",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"nic_name_years","type":"uint32"},
+				{"name":"bid_hash","type":"uint256"},
+				{"name":"bid_pk","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "regReservedName",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"nic_name_years","type":"uint32"},
+				{"name":"name_owner","type":"address"},
+				{"name":"name_owner_key","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "calculateBidHash",
+			"inputs": [
+				{"name":"bid_value","type":"uint128"},
+				{"name":"seed","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getAddress",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "m_address",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_address","type":"address"}
+			]
+		},
+		{
+			"name": "m_hash",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_hash","type":"uint256"}
+			]
+		},
+		{
+			"name": "m_name",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_name","type":"bytes"}
+			]
+		},
+		{
+			"name": "m_win_key",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_win_key","type":"uint256"}
+			]
+		},
+		{
+			"name": "m_win_address",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_win_address","type":"address"}
+			]
+		},
+		{
+			"name": "m_win_price",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_win_price","type":"uint128"}
+			]
+		},
+		{
+			"name": "m_failed_name",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_failed_name","type":"bytes"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+		{
+			"name": "OnAuctionCreated",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"nic_name_timespan","type":"uint32"},
+				{"name":"nic_name_starts_at","type":"uint32"},
+				{"name":"bid_phase_ends_at","type":"uint32"},
+				{"name":"ends_at","type":"uint32"},
+				{"name":"bid_key","type":"uint256"},
+				{"name":"bid_hash","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OnAuctionCompleted",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"nic_name_starts_at","type":"uint32"},
+				{"name":"nic_name_timespan","type":"uint32"},
+				{"name":"owner_key","type":"uint256"},
+				{"name":"owner_address","type":"address"},
+				{"name":"name_budget","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OnAuctionFailed",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"nic_name_timespan","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OnAuctionPong",
+			"inputs": [
+				{"name":"name_hash","type":"uint256"},
+				{"name":"nic_name_years","type":"uint32"},
+				{"name":"bid_hash","type":"uint256"},
+				{"name":"bid_key","type":"uint256"},
+				{"name":"reserved_until","type":"uint32"},
+				{"name":"completed_at","type":"uint32"}
+			],
+			"outputs": [
+			]
+		}
+	]
+}

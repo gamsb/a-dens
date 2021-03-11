@@ -1,0 +1,169 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"owns_until","type":"uint32"},
+				{"name":"name_owner_key","type":"uint256"},
+				{"name":"name_owner_address","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getNICString",
+			"inputs": [
+				{"name":"nic_name","type":"bytes"}
+			],
+			"outputs": [
+				{"name":"value0","type":"bytes"}
+			]
+		},
+		{
+			"name": "setNICString",
+			"inputs": [
+				{"name":"nic_name","type":"bytes"},
+				{"name":"value","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setNICDeNSRoot",
+			"inputs": [
+				{"name":"dens_root","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "removeNICString",
+			"inputs": [
+				{"name":"nic_name","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getWhois",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"name","type":"bytes"},{"name":"nicAddress","type":"address"},{"name":"nicDeNSRoot","type":"address"},{"name":"ownerAddress","type":"address"},{"name":"ownerPublicKey","type":"uint256"},{"name":"validUntil","type":"uint32"}],"name":"value0","type":"tuple"}
+			]
+		},
+		{
+			"name": "ping",
+			"inputs": [
+				{"name":"name_hash","type":"uint256"},
+				{"name":"nic_name_years","type":"uint32"},
+				{"name":"bid_hash","type":"uint256"},
+				{"name":"bid_pk","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updateState",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setNextOwner",
+			"inputs": [
+				{"name":"name_hash","type":"uint256"},
+				{"name":"nic_name_timespan","type":"uint32"},
+				{"name":"owner_key","type":"uint256"},
+				{"name":"owner_address","type":"address"},
+				{"name":"value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "calculateBidHash",
+			"inputs": [
+				{"name":"bid_value","type":"uint128"},
+				{"name":"seed","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getAddress",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "m_name_hash",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_name_hash","type":"uint256"}
+			]
+		},
+		{
+			"name": "m_creator",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_creator","type":"address"}
+			]
+		},
+		{
+			"name": "m_name_owner_key",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_name_owner_key","type":"uint256"}
+			]
+		},
+		{
+			"name": "m_name_owner_address",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_name_owner_address","type":"address"}
+			]
+		},
+		{
+			"name": "m_owns_until",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_owns_until","type":"uint32"}
+			]
+		},
+		{
+			"name": "m_name",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_name","type":"bytes"}
+			]
+		},
+		{
+			"name": "m_dens_root",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_dens_root","type":"address"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"m_name_hash","type":"uint256"},
+		{"key":2,"name":"m_creator","type":"address"}
+	],
+	"events": [
+	]
+}

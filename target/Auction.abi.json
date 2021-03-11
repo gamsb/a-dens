@@ -1,0 +1,202 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"nic_name_timespan","type":"uint32"},
+				{"name":"nic_name_starts_at","type":"uint32"},
+				{"name":"bid_phase_ends_at","type":"uint32"},
+				{"name":"ends_at","type":"uint32"},
+				{"name":"bid_key","type":"uint256"},
+				{"name":"bid_hash","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "bid",
+			"inputs": [
+				{"name":"bid_hash","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "startNewAuctionRound",
+			"inputs": [
+				{"name":"name_hash","type":"uint256"},
+				{"name":"nic_name_timespan","type":"uint32"},
+				{"name":"nic_name_starts_at","type":"uint32"},
+				{"name":"bid_phase_ends_at","type":"uint32"},
+				{"name":"ends_at","type":"uint32"},
+				{"name":"bid_key","type":"uint256"},
+				{"name":"bid_hash","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "payBid",
+			"inputs": [
+				{"name":"bid_key","type":"uint256"},
+				{"name":"bid_value","type":"uint128"},
+				{"name":"seed","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getAuctionInfo",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"nic_name","type":"bytes"},{"name":"nic_name_timespan","type":"uint32"},{"name":"nic_name_starts_at","type":"uint32"},{"name":"bid_phase_ends_at","type":"uint32"},{"name":"ends_at","type":"uint32"},{"name":"completed_at","type":"uint32"},{"name":"auction_state","type":"uint8"}],"name":"value0","type":"tuple"}
+			]
+		},
+		{
+			"name": "getAuctionState",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"uint8"}
+			]
+		},
+		{
+			"name": "ping",
+			"inputs": [
+				{"name":"name_hash","type":"uint256"},
+				{"name":"nic_name_years","type":"uint32"},
+				{"name":"bid_hash","type":"uint256"},
+				{"name":"bid_key","type":"uint256"},
+				{"name":"reserved_until","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updateState",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "calculateBidHash",
+			"inputs": [
+				{"name":"bid_value","type":"uint128"},
+				{"name":"seed","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getAddress",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "m_name_hash",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_name_hash","type":"uint256"}
+			]
+		},
+		{
+			"name": "m_creator",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_creator","type":"address"}
+			]
+		},
+		{
+			"name": "m_nic_name_timespan",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_nic_name_timespan","type":"uint32"}
+			]
+		},
+		{
+			"name": "m_nic_name_starts_at",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_nic_name_starts_at","type":"uint32"}
+			]
+		},
+		{
+			"name": "m_bid_phase_ends_at",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_bid_phase_ends_at","type":"uint32"}
+			]
+		},
+		{
+			"name": "m_ends_at",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_ends_at","type":"uint32"}
+			]
+		},
+		{
+			"name": "m_name",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_name","type":"bytes"}
+			]
+		},
+		{
+			"name": "m_completed_at",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_completed_at","type":"uint32"}
+			]
+		}
+	],
+	"data": [
+		{"key":1,"name":"m_name_hash","type":"uint256"},
+		{"key":2,"name":"m_creator","type":"address"}
+	],
+	"events": [
+		{
+			"name": "OnAuctionPayBid",
+			"inputs": [
+				{"name":"key","type":"uint256"},
+				{"components":[{"name":"actual_value","type":"uint128"},{"name":"bid_value","type":"uint128"},{"name":"bid_address","type":"address"},{"name":"payed_at","type":"uint32"}],"name":"v","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OnAuctionBid",
+			"inputs": [
+				{"name":"key","type":"uint256"},
+				{"name":"bid_hash","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "OnReturnBidValue",
+			"inputs": [
+				{"name":"bid_address","type":"address"},
+				{"name":"bid_value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		}
+	]
+}

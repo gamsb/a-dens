@@ -1,0 +1,44 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "set_m_dens_addr",
+			"inputs": [
+				{"name":"dens_addr","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "regReservedName",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"nic_name_years","type":"uint32"},
+				{"name":"name_owner","type":"address"},
+				{"name":"name_owner_key","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "m_dens_addr",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_dens_addr","type":"address"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}

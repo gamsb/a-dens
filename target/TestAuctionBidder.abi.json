@@ -1,0 +1,105 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"bid_key","type":"uint256"},
+				{"name":"seed","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "payBid",
+			"inputs": [
+				{"name":"auction","type":"address"},
+				{"name":"bid_value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "regName",
+			"inputs": [
+				{"name":"dens","type":"address"},
+				{"name":"name","type":"bytes"},
+				{"name":"nic_name_years","type":"uint32"},
+				{"name":"bid_value","type":"uint128"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updateAuctionState",
+			"inputs": [
+				{"name":"auction","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updateNICState",
+			"inputs": [
+				{"name":"nic","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "calculateBidHash",
+			"inputs": [
+				{"name":"bid_value","type":"uint128"},
+				{"name":"seed","type":"uint32"}
+			],
+			"outputs": [
+				{"name":"value0","type":"uint256"}
+			]
+		},
+		{
+			"name": "getAddress",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"address"}
+			]
+		},
+		{
+			"name": "m_bid_key",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_bid_key","type":"uint256"}
+			]
+		},
+		{
+			"name": "m_seed",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_seed","type":"uint32"}
+			]
+		},
+		{
+			"name": "m_last_received",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_last_received","type":"uint128"}
+			]
+		},
+		{
+			"name": "m_last_from",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_last_from","type":"address"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}

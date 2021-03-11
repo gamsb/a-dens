@@ -1,0 +1,42 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "set_nic_address",
+			"inputs": [
+				{"name":"nic_address","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setNICString",
+			"inputs": [
+				{"name":"nic_name","type":"bytes"},
+				{"name":"value","type":"bytes"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "m_nic_address",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"m_nic_address","type":"address"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}
